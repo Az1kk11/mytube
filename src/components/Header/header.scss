@@ -1,0 +1,174 @@
+.top-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+    height: 3.5rem;
+    background-color: #000;
+    position:sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .menu-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        .mabil-menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            margin-right: 24px;
+            &:hover{
+                background-color: #303030;
+            }
+            
+        }
+    }
+    .logo{
+        display: flex;
+        align-items:center;
+        height: 20px;
+         transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+         transition: 0.3s;
+         &:hover,
+         &:focus-visible{
+            --_p: 0%;
+            --_i: 1;
+         }
+        .desktop-logo{
+            width: 100px;
+        }
+        .mobil-logo{
+            display: none;
+            width: 40px;
+        }
+    }
+    .input-box{
+        display: flex;
+        align-items: center;
+        .input-border{
+            display: flex;
+            height: 40px;
+            border: 1px solid #303030;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            padding-left: 20px;
+            &:focus-within{
+                border-color: rgb(59 130 246 );
+            }
+            .input-top{
+                background: transparent;
+                outline: none;
+                color: white;
+                padding-right: 20px;
+                padding-left: 20px;
+                border: none;
+                width: 500px;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+            }
+        }
+        .btn-top{
+            width: 60px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #303030;
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            background: transparent;
+            background-color: #303030;
+            color: white;
+        }
+    }
+    .right-top{
+        display: flex;
+        align-items: center;
+        .add-line{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .bnt-add-line{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-right: 20px;
+                color: white;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) and (min-width:300px) {
+    .desktop-logo{
+        display: none !important;
+    }
+    .mobil-logo{
+        display: block !important;
+    }
+    .mabil-menu{
+        display: flex !important;
+        margin-right: 24px;
+    }
+    .input-top{
+        width: 400px !important;
+    }
+}
+@media (max-width:900px) and (min-width:750px) {
+    .input-top{
+        width: 300px !important;
+    }
+}
+@media (max-width:750px) and (min-width:300px) {
+    .input-top{
+        width: 200px !important ;
+    }
+    .bnt-add-line{
+        display: none !important    ;
+    }
+    .btn-top{
+        height: 30px !important;
+        width: 40px !important;
+    }
+    .input-border{
+        height: 30px !important;
+    }
+}
+@media (max-width:466px) and (min-width:390px) {
+    .input-top{
+        width: 150px !important;
+    }
+    .btn-top{
+        width: 30px !important;
+    }
+    .mabil-menu{
+        margin-right: 15px !important;   
+    }
+    .mobil-logo{
+        width: 30px !important;
+        margin-right: 10px !important;
+    }
+}
+@media (max-width:390px) and (min-width:300px) {
+    .input-top{
+        width: 90px !important;
+    }
+    .mobil-logo{
+        width: 30px !important;
+        margin-right: 10px !important;
+    }
+    .mabil-menu{
+        margin-right: 10px !important;  
+    }
+}

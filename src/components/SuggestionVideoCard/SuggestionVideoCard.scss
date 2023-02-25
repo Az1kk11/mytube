@@ -1,0 +1,118 @@
+.subes-video{
+    display: flex;
+    margin-bottom: 12px;
+    padding: 5px;
+    &:hover{
+        background-color: #333;
+        border-radius: 12px;
+    }
+    .suges-img{
+        position: relative;
+        height: 96px;
+        width: 160px;
+        min-width: 168px;
+        border-radius: 12px;
+        background-color: rgb(30, 41, 59);
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .suges-desc{
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+        overflow: hidden;
+        .suges-title{
+            font-size: 14px;
+            line-height:20px;
+            font-weight: 700;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: white;
+        }
+        .suges-auther-title{
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+            color: white;
+            display: flex;
+            align-items: center;
+            .suges-badges{
+                color: #aaa;
+                font-size: 12px;
+                margin-left: 4px;
+            }
+        }
+        .suges-stats{
+            display: flex;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            .suges-s{
+                display: flex;
+                font-size: 24px;
+                line-height: 1;
+                font-weight: 700;
+                color: white;
+                position: relative;
+                top: -10px;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            .truncate{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+@media (min-width:1024px) {
+    .suges-img{
+        height: 80px;
+        width: 128px;
+        min-width: 128px;
+    }
+    .suges-title{
+        font-size: 12px;
+        line-height:16px;
+    }
+    .suges-auther-title{
+        font-size: 10px;
+        .suges-badges{
+            font-size: 10px;
+        }
+    }
+    .suges-stats{
+        font-size: 10px;
+    }
+}
+@media (min-width:1280px) {
+    .suges-img{
+        height: 96px;
+        width: 160px;
+        min-width: 168px;
+    }
+    .suges-title{
+        font-size: 14px;
+        line-height:20px;
+    }
+    .suges-auther-title{
+        font-size: 12px;
+        .suges-badges{
+            font-size: 12px;
+        }
+    }
+    .suges-stats{
+        font-size: 12px;
+    }
+}

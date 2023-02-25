@@ -1,0 +1,149 @@
+.video-box-player{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    height: calc( 100% - 56px );
+    .video-con-player{
+        width: 100%;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        .video-content{
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            overflow-y: auto !important;
+            .player{
+                height: 450px;
+                margin-left: -16px;
+                margin-right: -16px;
+            }
+            .video-title{
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                margin-top: 14px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            .desc{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-top: 16px;
+                .img-avatar{
+                    display: flex;
+                    height: 44px;
+                    width: 44px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .subs-text{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 12px;
+                    .text-icon{
+                        color: white;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                    }
+                    .text{
+                        color: white;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+                .stats{
+                    display: flex;
+                    color: white;
+                    margin-top: 16px;
+                    .like{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 44px;
+                        margin: 0 10px;
+                        border-radius: 24px;
+                        color: white;
+                        background-color: #222;
+                        padding: 0 20px;
+                        cursor: pointer;
+                        &:active{
+                            background-color: #333;
+                            transition: 500ms;
+                        }
+                    }
+                }
+            }
+        }
+        .suges-video{
+            display: flex;
+            flex-direction: column;
+            padding: 24px 0;
+            padding: 0 14px;
+            overflow-y: auto !important;
+            height: 100%;
+        }
+    }
+}
+@media (min-width:768px) {
+    .video-con-player{
+        flex-direction: column !important;
+        .player{
+            height: 700px !important;
+        }
+    }
+    .video-title{
+        font-size:20px !important;
+        line-height:28px !important;
+    }
+    .desc{
+        flex-direction: row !important;
+    }
+    .stats{
+        margin-top: 0 !important;
+    }
+}
+@media (min-width:1024px) {
+    .video-con-player{
+        flex-direction: row !important; 
+    }
+    .video-content{
+        width: calc(100% - 350px) !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+        .player{
+            height: 400px !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+    .suges-video{
+        width: 350px !important;
+    }
+}
+@media (min-width:1280px) {
+    .video-content{
+        width: calc(100% - 400px) !important;
+        .player{
+            height: 550px !important;
+        }
+    }
+    .suges-video{
+        width: 400px !important;
+    }
+}
